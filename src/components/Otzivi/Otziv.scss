@@ -1,0 +1,144 @@
+.otziv {
+  padding: 60px 0;
+  background-image: url(https://luiza-fortuna.kz/img/bg.png);
+  background-size: cover;
+
+  &__wrapper {
+    text-align: center;
+    color: #fff;
+
+    img {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    button {
+      margin-top: 30px;
+    }
+
+    .mySwiper {
+      padding-bottom: 40px;
+      overflow: hidden; // чтобы соседние слайды не были видны
+
+      .swiper-slide {
+        border-radius: 16px;
+        width: 320px;
+        max-width: 90%;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+        .review-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            max-width: 330px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+          }
+
+          h3 {
+            background: url(https://luiza-fortuna.kz/img/gold.png);
+            font-size: 25px;
+            background-size: 100%;
+            background-position: center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family: Philosopher;
+            font-weight: 700;
+            line-height: 60px;
+            text-transform: uppercase;
+          }
+
+          p {
+            color: #fff;
+            text-align: center;
+            text-shadow: 1px 1px 1px #000;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 31.5px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 28px;
+    }
+
+    .swiper-slide {
+      width: 260px !important;
+    }
+
+    button {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .swiper-slide {
+      width: 230px !important;
+    }
+
+    .review-card p {
+      font-size: 13px;
+    }
+  }
+}
+.otziv {
+  .mySwiper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: start;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 400px; // ограничиваем ширину слайда
+      margin: 0 auto;
+      transform: scale(1);
+      transition: transform 0.3s ease;
+    }
+
+    .swiper-slide:not(.swiper-slide-active) {
+      display: none; // прячем неактивные слайды на мобилках
+    }
+
+    @media (min-width: 1024px) {
+      .swiper-slide,
+      .swiper-slide-visible,
+      .swiper-slide-active {
+        transform: rotateY(0deg) !important;
+      }
+      .swiper-slide {
+        display: flex !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper-slide,
+  .swiper-slide-visible,
+  .swiper-slide-active {
+    transform: rotateY(0deg) !important;
+  }
+}
+

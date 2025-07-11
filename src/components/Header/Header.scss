@@ -1,0 +1,135 @@
+.header {
+  background-image: url(/header.png);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.466) 0%, #ffaa001e 100%),
+    url(/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100dvh;
+  width: 100%;
+  &__wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    padding-top: 50px;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+  &__block {
+    max-width: 540px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text-small {
+    font-size: clamp(1.125rem, 0.807rem + 1.59vw, 2rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38.4px;
+
+    background: url(https://luiza-fortuna.kz/img/gold.png);
+    background-size: 100%;
+    background-position: center;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__text-big {
+    color: #fff;
+
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    font-family: Philosopher;
+    font-size: clamp(1rem, 0.886rem + 0.57vw, 1.313rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: clamp(1.375rem, 1.148rem + 1.14vw, 2rem);
+  }
+
+  &__phone-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 36px;
+    }
+    p {
+      background: url(https://luiza-fortuna.kz/img/gold.png);
+      font-size: clamp(1.563rem, 1.335rem + 1.14vw, 2.188rem);
+      background-size: 100%;
+      background-position: center;
+      background-clip: text;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 60px; /* 150% */
+      text-transform: uppercase;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+  }
+}
+
+h1 {
+  background: url(https://luiza-fortuna.kz/img/gold.png);
+  font-size: clamp(1.5rem, 0.364rem + 5.68vw, 4.625rem);
+  background-size: 100%;
+  background-position: center;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+button {
+  background: transparent url("btnn.png") center/cover no-repeat;
+  padding: 12px 50px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+
+  color: #fff;
+
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
+/* Для старых браузеров */
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+}
+.bottom {
+  background-image: url(/line.png);
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 70px;
+}
